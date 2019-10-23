@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp">
+    <TextView
+
+            android:id="@+id/tv_chat_message_receive_body"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp" android:background="@drawable/item_rounded_rectangle"
+            android:backgroundTint="@color/receivedMessageBackgroundColor" android:minWidth="50dp"
+            android:padding="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" android:textColor="@color/senderText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" tools:text="Hiiiiiiiiiii"/>
+    <TextView
+            android:id="@+id/tv_chat_message_receive_timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textSize="12sp" app:layout_constraintStart_toStartOf="@+id/tv_chat_message_receive_body"
+            app:layout_constraintTop_toBottomOf="@+id/tv_chat_message_receive_body"
+            tools:text="8:45 AM"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

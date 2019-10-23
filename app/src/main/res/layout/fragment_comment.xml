@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        android:background="?android:windowBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".CommentFragment">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_article_comment_main"
+            tools:listitem="@layout/item_article_comment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/view2"
+            app:layout_constraintTop_toTopOf="parent" tools:layout_editor_absoluteX="0dp"/>
+    <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/civ_article_comment_app_user_pic"
+                                                  android:layout_width="48dp"
+                                                  android:layout_height="48dp"
+                                                  android:layout_marginStart="8dp"
+                                                  android:layout_marginLeft="8dp"
+                                                  android:src="@drawable/user_48px"
+                                                  app:layout_constraintStart_toStartOf="parent"
+                                                  app:layout_constraintTop_toTopOf="@+id/et_article_comment_main"/>
+    <EditText
+            android:id="@+id/et_article_comment_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/mb_article_comment_post" app:layout_constraintStart_toEndOf="@+id/civ_article_comment_app_user_pic"/>
+    <com.google.android.material.button.MaterialButton android:id="@+id/mb_article_comment_post"
+                                                       android:layout_width="wrap_content"
+
+                                                       android:layout_height="wrap_content"
+                                                       android:layout_marginTop="8dp"
+                                                       android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+                                                       android:text="Post"
+                                                       app:layout_constraintEnd_toEndOf="parent"
+                                                       app:layout_constraintTop_toTopOf="@+id/et_article_comment_main"/>
+    <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent" android:layout_height="2dp"
+            android:layout_marginBottom="8dp" android:background="#00000000"
+            app:layout_constraintBottom_toTopOf="@+id/et_article_comment_main" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

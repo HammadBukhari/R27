@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activity27">
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/abl_home"
+                                                     style="@style/Widget.MaterialComponents.AppBarLayout.Surface"
+                                                     android:layout_width="match_parent"
+                                                     android:layout_height="48dp"
+                                                     app:layout_constraintStart_toStartOf="parent"
+                                                     app:layout_constraintTop_toTopOf="parent">
+        <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/tb_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="0dp"
+                android:theme="@style/Widget.MaterialComponents.Toolbar.Surface"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+                                                               android:layout_height="match_parent">
+                <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/civ_main_user_pic"
+                                                              android:layout_width="36dp" android:layout_height="36dp"
+
+                                                              app:layout_constraintBottom_toBottomOf="parent"
+                                                              app:layout_constraintStart_toStartOf="parent"
+                                                              app:layout_constraintTop_toTopOf="parent"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                          android:layout_margin="8dp" android:layout_marginStart="8dp"
+                          android:layout_marginLeft="8dp"
+                          android:layout_marginEnd="8dp"
+                          android:layout_marginRight="8dp"
+                          android:text="Hammad Ali"
+                          android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                          android:textStyle="bold"
+                          app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                          app:layout_constraintStart_toEndOf="@+id/civ_main_user_pic"
+                          app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.MaterialToolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <com.gauravk.bubblenavigation.BubbleNavigationConstraintView
+            android:id="@+id/bnb"
+            style="@style/Widget.MaterialComponents.BottomAppBar.PrimarySurface"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:elevation="4dp"
+            android:padding="12dp"
+            app:bnc_mode="spread"
+
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+                android:id="@+id/bnb_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bt_active="true"
+                app:bt_colorActive="@color/bnbHomeActive"
+                app:bt_colorInactive="@color/bnbHomeInactive"
+                app:bt_icon="@drawable/ic_bnb_home_24dp"
+                app:bt_title="@string/bnbHome" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        <com.gauravk.bubblenavigation.BubbleToggleView
+                android:id="@+id/bnb_my_orders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bt_colorActive="@color/bnbNearbyActive"
+                app:bt_colorInactive="@color/bnbNearbyInactive"
+                app:bt_icon="@drawable/ic_bnb_nearby_24dp"
+                app:bt_title="@string/bnbNearby"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.49"/>
+        <com.gauravk.bubblenavigation.BubbleToggleView
+                android:id="@+id/bnb_ratings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:bt_colorActive="@color/bnbProfileActive"
+                app:bt_colorInactive="@color/bnbProfileInactive"
+                app:bt_icon="@drawable/ic_bnb_profile_24dp"
+                app:bt_title="@string/bnbProfile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        <!-- Add more child items here - max upto 5 -->
+
+    </com.gauravk.bubblenavigation.BubbleNavigationConstraintView>
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            app:layout_constraintBottom_toTopOf="@+id/bnb"
+            app:layout_constraintTop_toBottomOf="@+id/abl_home" app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="-495dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+        <!--app:bt_shape="@drawable/transition_background_drawable_restaurant"-->

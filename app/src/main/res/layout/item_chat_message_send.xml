@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp">
+    <TextView
+
+            android:id="@+id/tv_chat_message_send_body"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" android:background="@drawable/item_rounded_rectangle"
+            android:backgroundTint="@color/colorPrimary" android:minWidth="50dp"
+            android:padding="8dp" android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/senderText" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" tools:text="Hiiiiiiiiiii"/>
+    <TextView
+            android:id="@+id/tv_chat_message_send_timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textSize="12sp" app:layout_constraintStart_toStartOf="@+id/tv_chat_message_send_body"
+            app:layout_constraintTop_toBottomOf="@+id/tv_chat_message_send_body"
+            tools:text="8:45 AM"/>
+    <ImageView
+            android:id="@+id/iv_chat_message_send_status"
+            android:layout_width="11dp" android:layout_height="11dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_chat_message_send_timestamp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_chat_message_send_body"
+            app:layout_constraintStart_toEndOf="@+id/tv_chat_message_send_timestamp"
+            app:layout_constraintTop_toTopOf="@+id/tv_chat_message_send_timestamp"
+            app:srcCompat="@drawable/ic_tick_48px"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

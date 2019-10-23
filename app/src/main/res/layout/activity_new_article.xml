@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".NewArticleActivity">
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_new_article_user_pic"
+            android:layout_width="48dp"
+            android:layout_height="48dp" android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp" android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+              android:layout_marginStart="8dp" android:layout_marginLeft="8dp"
+              android:layout_marginTop="4dp" android:layout_marginEnd="8dp"
+              android:layout_marginRight="8dp"
+              android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toEndOf="@+id/civ_new_article_user_pic" app:layout_constraintTop_toTopOf="@+id/civ_new_article_user_pic"
+              tools:text="Hammad Ali Shah"/>
+    <EditText
+            android:id="@+id/et_new-article_body"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@null" android:ems="10"
+            android:gravity="start|top"
+            android:hint="What's on your mind?"
+            android:inputType="textMultiLine" app:layout_constraintBottom_toTopOf="@+id/iv_new_article_uploaded"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/civ_new_article_user_pic"/>
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/mib_new_article_add_image"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Add Image" app:cornerRadius="8dp"
+            app:icon="@drawable/outline_add_photo_alternate_black_18" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcv_new_article_uploading"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:minWidth="200dp"
+            android:minHeight="200dp"
+            android:padding="24dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      app:layout_constraintBottom_toBottomOf="parent"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toTopOf="parent">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:layout_margin="16dp" android:text="Uploading"
+                      android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+            <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_margin="16dp"
+                    tools:layout_editor_absoluteX="80dp" tools:layout_editor_absoluteY="172dp"/>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <ImageView
+            android:id="@+id/iv_new_article_uploaded" android:layout_width="128dp"
+            android:layout_height="128dp" android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp" android:layout_marginBottom="8dp"
+            android:minWidth="128dp"
+            android:minHeight="128dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" tools:srcCompat="@tools:sample/avatars[0]"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

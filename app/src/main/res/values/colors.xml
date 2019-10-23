@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#28AD9C</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="bottomNavBackground">#F0EEEE</color>
+    <color name="bnbHomeActive">#FF0000</color>
+    <color name="bnbHomeInactive">#ff7f7f</color>
+    <color name="bnbNearbyActive">#FF0064</color>
+    <color name="bnbNearbyInactive">#ff7fb1</color>
+    <color name="bnbProfileActive">#0000FF</color>
+    <color name="bnbProfileInactive">#7f7fff</color>
+    <color name="splash">#28AD9C</color>
+    <color name="upvoted">#FF0000</color>
+    <color name="notUpvoted">#000000</color>
+    <color name="senderText">#FFFFFF</color>
+    <color name="receivedMessageBackgroundColor">#448AFF</color>
+</resources>
